@@ -1,16 +1,7 @@
 [build]
-builder = "nixpacks"
-
-[build.nixpacksConfig]
-aptPkgs = ["libgl1", "libglib2.0-0", "libsm6", "libxext6", "libxrender1", "libgomp1", "libgthread-2.0-0"]
-
-[start]
-cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
 
 [deploy]
 healthcheckPath = "/health"
 healthcheckTimeout = 300
-
-[variables]
-QT_QPA_PLATFORM = "offscreen"
-OPENCV_IO_ENABLE_OPENEXR = "0"
