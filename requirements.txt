@@ -5,7 +5,8 @@ pillow==10.3.0
 opencv-python-headless==4.9.0.80
 ultralytics==8.1.0
 numpy==1.26.4
-torch==2.2.0
-torchvision==0.17.0
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
 pydantic==2.4.2
 setuptools>=65.5.1
