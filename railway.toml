@@ -1,8 +1,12 @@
 [build]
-cmd = "pip install -r requirements.txt"
+nixpacksPlan = "nixpacks.toml"
 
 [start]
 cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 300
 
 [variables]
 QT_QPA_PLATFORM = "offscreen"
